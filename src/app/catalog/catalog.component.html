@@ -1,1 +1,22 @@
-<p>catalog works!</p>
+<h1>Todos nuestos productos</h1>
+<p>Aca podes encargar cualquiera de nuestros productos</p>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sweet of catalog">
+            <td>{{sweet.name}}</td>
+            <td>{{sweet.type}}</td>
+            <td>{{sweet.description}}</td>
+            <td>{{sweet.price}}</td>
+            <td><button type="button" class="btn btn-success">Encargar</button></td>
+        </tr>
+    </tbody>
+</table>
