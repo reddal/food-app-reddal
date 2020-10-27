@@ -1,24 +1,26 @@
 <h1>Productos frescos</h1>
 <p>Hechos esta misma mañana pueden estar en tu casa esta tarde, pedí antes que se terminen</p>
-<table class="table table-responsive">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th> </th>
-        </tr>
-    </thead>
-    <tbody>
-        <ng-container *ngFor="let sweet of fresh">
-            <tr *ngIf="sweet.stock !== 0">
-                <td>{{sweet.name}}</td>
-                <td>{{sweet.type}}</td>
-                <td>{{sweet.description}}</td>
-                <td>{{sweet.price}}</td>
-                <td><button type="button" class="btn btn-success">Al carrito</button></td>
+<div class="table-responsive">
+    <table class="table ">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th> </th>
             </tr>
-        </ng-container>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let sweet of fresh">
+                <tr *ngIf="sweet.stock !== 0">
+                    <td>{{sweet.name}}</td>
+                    <td>{{sweet.type}}</td>
+                    <td>{{sweet.description}}</td>
+                    <td>{{sweet.price}}</td>
+                    <td><button type="button" class="btn btn-success">Al carrito</button></td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
