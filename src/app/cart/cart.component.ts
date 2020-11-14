@@ -15,7 +15,6 @@ export class CartComponent implements OnInit {
   {
     this.cartList$=cart.cartList.asObservable();
     this.totalPrice$=cart.totalPrice;
-    console.log(this.totalPrice$);
   }
 
   ngOnInit(): void {

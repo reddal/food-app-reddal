@@ -9,6 +9,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { OrdersComponent } from './orders/orders.component';
 import { BuyComponent } from './buy/buy.component';
 import { IntCounterComponent } from './int-counter/int-counter.component';
+import { WorkOnProgressComponent } from './work-on-progress/work-on-progress.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IntCounterComponent } from './int-counter/int-counter.component';
     CatalogComponent,
     OrdersComponent,
     BuyComponent,
-    IntCounterComponent
+    IntCounterComponent,
+    WorkOnProgressComponent
   ],
   imports: [
     BrowserModule,

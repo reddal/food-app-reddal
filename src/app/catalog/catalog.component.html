@@ -8,7 +8,6 @@
                 <div class="card-body">
                     <h5 class="card-title">{{sweet.name}}</h5>
                     <p class="card-text">{{sweet.description}}</p>
-                    <p>stock= {{sweet.stock}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{sweet.type}}</li>
@@ -17,7 +16,7 @@
                 <div class="card-body">
                     <app-int-counter [(quantity)]=sweet.quantity [max]=10></app-int-counter>
                 </div>
-                <div class="list-group"><button class="btn-primary">encargar!</button></div>
+                <div class="list-group"><button class="btn-primary" routerLink="/work-in-progress">encargar!</button></div>
             </div>
         </div>
     </div>
