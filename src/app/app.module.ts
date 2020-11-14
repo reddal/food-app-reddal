@@ -7,6 +7,8 @@ import { FreshComponent } from './fresh/fresh.component';
 import { CartComponent } from './cart/cart.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { OrdersComponent } from './orders/orders.component';
+import { BuyComponent } from './buy/buy.component';
+import { IntCounterComponent } from './int-counter/int-counter.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { OrdersComponent } from './orders/orders.component';
     FreshComponent,
     CartComponent,
     CatalogComponent,
-    OrdersComponent
+    OrdersComponent,
+    BuyComponent,
+    IntCounterComponent
   ],
   imports: [
     BrowserModule,

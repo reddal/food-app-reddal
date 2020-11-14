@@ -1,24 +1,24 @@
-<h1>Todos nuestos productos</h1>
-<p>Aca podes encargar cualquiera de nuestros productos</p>
-<div class="table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-                <th> </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let sweet of catalog">
-                <td>{{sweet.name}}</td>
-                <td>{{sweet.type}}</td>
-                <td>{{sweet.description}}</td>
-                <td>{{sweet.price}}</td>
-                <td><button type="button" class="btn btn-success">Encargar</button></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container text-center">
+    <h1>Todos nuestos productos</h1>
+    <p>Aca podes encargar cualquiera de nuestros productos</p>
+    <div class="row">
+        <div class="col-4" *ngFor="let sweet of catalog$|async">
+            <div class="card my-2" style="width: 18rem;" >
+                <img src="{{sweet.img_src}}" class="card-img-top" alt="{{sweet.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{sweet.name}}</h5>
+                    <p class="card-text">{{sweet.description}}</p>
+                    <p>stock= {{sweet.stock}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{sweet.type}}</li>
+                    <li class="list-group-item">${{sweet.price}}</li>
+                </ul>
+                <div class="card-body">
+                    <app-int-counter [(quantity)]=sweet.quantity [max]=10></app-int-counter>
+                </div>
+                <div class="list-group"><button class="btn-primary">encargar!</button></div>
+            </div>
+        </div>
+    </div>
 </div>

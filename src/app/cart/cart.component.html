@@ -1,10 +1,9 @@
 <div class="container">
     <h1>Tu carrito</h1>
     <ul>
-        <li>John lemon cantidad: 3 precio: $240 </li>
-        <li>Charlie brownie cantidad: 2 precio: $100 </li>
-        <li>Tangerine dream cantidad: 1 precio: $150 </li>
-        <li>Total: $490</li>
+        <li *ngFor='let sweet of cartList$|async'>{{sweet.name}} cantidad: {{sweet.quantity}} precio: ${{sweet.quantity*sweet.price}} </li>
+        
+        <li>Total: ${{totalPrice$["_value"]}}</li>
     </ul>
     <div class="text-center">
         <button type="button" class="btn btn-success">Comprar</button>

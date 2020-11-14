@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { CartService } from '../cart.service';
+import { CatalogService } from '../catalog.service';
 import { Sweet } from "../Sweet";
 @Component({
   selector: 'app-fresh',
@@ -6,38 +9,15 @@ import { Sweet } from "../Sweet";
   styleUrls: ['./fresh.component.scss']
 })
 export class FreshComponent implements OnInit {
-  fresh: Sweet[] = [
-    {
-      name: "Charlie brownie",
-      type: "Brownie",
-      price: 50,
-      description: "deliciosa porcion de brownie de chocolate con merengue",
-      stock: 5,
-    },
-    {
-      name: "Tha Homer",
-      type: "Donas",
-      price: 130,
-      description: "3 donas con glaseado rosa y chispitas de colores",
-      stock: 0,
-    },
-    {
-      name: "John lemon",
-      type: "Lemon pie",
-      price: 80,
-      description: "Es una porcion lemon pie, no hay mucho vuelta",
-      stock: 10,
-    },
-    {
-      name: "Tangerine dream",
-      type: "Budin de mandarinas",
-      price: 150,
-      description: "mermeladamermeladamermeladamermeladamermelada",
-      stock: 2,
-    },
-  ]
-  constructor() { }
-
+  catalog$: Observable<Sweet[]>;
+  constructor(private cart: CartService, private catalog: CatalogService,) {
+    this.catalog$ = catalog.catalog.asObservable();
+  }
+  addToCart(sweet: Sweet): void {
+    this.cart.addToCart(sweet);
+    sweet.stock -= sweet.quantity;
+    sweet.quantity = 0;
+  }
   ngOnInit(): void {
   }
 
