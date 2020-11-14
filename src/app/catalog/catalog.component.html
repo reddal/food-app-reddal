@@ -1,8 +1,8 @@
-<div class="container text-center">
+<div class="container-fluid text-center">
     <h1>Todos nuestos productos</h1>
     <p>Aca podes encargar cualquiera de nuestros productos</p>
     <div class="row">
-        <div class="col-4" *ngFor="let sweet of catalog$|async">
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12" *ngFor="let sweet of catalog$|async">
             <div class="card my-2" style="width: 18rem;" >
                 <img src="{{sweet.img_src}}" class="card-img-top" alt="{{sweet.name}}">
                 <div class="card-body">
