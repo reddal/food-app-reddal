@@ -1,0 +1,7 @@
+images hosting for stackblitz things
+    donut: https://i.ibb.co/CKz4G0k/homer-donut.jpg
+    lemon pie: https://i.ibb.co/NNxmTwW/john-lemon.jpg
+    tangerine: https://i.ibb.co/v1h2Q7C/tangerine-dream.jpg
+    brownie: https://i.ibb.co/ZfSzpF3/charlie-brownie.jpg
+    construction worker: https://i.ibb.co/6mJVvbB/construction-worker.jpg
+    cookie: https://i.ibb.co/qds5LDw/happy-cookie.png
